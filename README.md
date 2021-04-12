@@ -1,6 +1,6 @@
-# code-sample-CBT
+# code-sample-EPAM
 
-The objective of this program is to read a csv file (Lat_Long.csv) with Latitude/Longitude coordinates and create a new csv file with the address information for each coordinate.
+The objective of this program is to read a excel file with Latitude/Longitude coordinates and create a new excel file with the address information for each coordinate. A sample excel file is included.
 
 API Documentation:
 https://developer.tomtom.com/search-api/search-api-documentation#
