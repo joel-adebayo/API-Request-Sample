@@ -18,13 +18,9 @@ import sys
 
 #Send a GET request to tomtom api
 def get_address (url): 
-    try:
-        r = requests.get(url,params)
-        geocodeJson = r.json()
-        return geocodeJson['addresses'][0]['address']
-        
-    except Exception as e:
-        return e
+    r = requests.get(url,params)
+    geocodeJson = r.json()
+    return geocodeJson['addresses'][0]['address']
 
 if __name__ == '__main__':
 
