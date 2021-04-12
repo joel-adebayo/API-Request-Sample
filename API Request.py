@@ -36,7 +36,7 @@ if __name__ == '__main__':
     #Use computer memory for api caching
     requests_cache.install_cache(backend='memory')
 
-    #Read input CSV file and create a list of urls
+    #Read input excel file and create a list of urls
     read_df = pd.read_excel(sys.argv[1], engine='openpyxl')
     urlList = [(f'https://api.tomtom.com/search/2/reverseGeocode/{read_df.loc[x,["Latitude"]].values[0]},'
                 f'{read_df.loc[x,["Longitude"]].values[0]}.JSON') for x in range(len(read_df.index))]
