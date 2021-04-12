@@ -6,7 +6,7 @@
 # Created:      4/12/2020
 # Copyright:    (c) Adebayo, Joel
 #
-# Objective:    Reverse geocode coordinates from a CSV file and print the address
+# Objective:    Reverse geocode coordinates from an excel file and print the address
 #-------------------------------------------------------------------------------
 
 import concurrent.futures #For sending api requests concurrently
@@ -36,7 +36,7 @@ if __name__ == '__main__':
     #Use computer memory for api caching
     requests_cache.install_cache(backend='memory')
 
-    #Read input CSV file and create a list of urls
+    #Read input excel file and create a list of urls
     read_df = pd.read_excel(sys.argv[1], engine='openpyxl')
 
     urlList = [(f'https://api.tomtom.com/search/2/reverseGeocode/{read_df.loc[x,["Latitude"]].values[0]},'
